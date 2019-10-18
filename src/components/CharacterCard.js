@@ -6,7 +6,7 @@ import {
 const CharacterCard = (props) => {
   return (
     <div className="character-card">
-      <Col md="12" md="6">
+      <Col md="12" md="6" key={props.id}>
         <Card>
           <CardImg src={props.chars.image} alt={props.name} />
           <CardBody>
