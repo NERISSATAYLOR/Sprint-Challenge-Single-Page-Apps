@@ -29,6 +29,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
+Benefits of client-side routing the pages don't refresh and give you only the information that you requested instead of reloading the whole page
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
