@@ -10,12 +10,12 @@ export default function CharacterList() {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     axios
-      //.get('https://rickandmortyapi.com/api/character/')
+      .get('https://rickandmortyapi.com/api/character/')
 
       .then(response => {
         setCharacter(response.data.results);
       });
-  }, [character]);
+  }, []);
 
 
 
@@ -26,11 +26,7 @@ export default function CharacterList() {
       {character.map((chars, index) => <CharacterCard
         chars={chars}
         key={index}
-        name={chars.name}
-        status={chars.status}
-        species={chars.species}
-        location={chars.location}
-        image={chars.image} />
+      />
       )}
     </div>
 

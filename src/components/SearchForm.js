@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import {
+  Card, Container, Row,
+  CardTitle, CardSubtitle,
+} from 'reactstrap';
 
 
 export default function SearchForm() {
@@ -46,10 +50,19 @@ export default function SearchForm() {
         {filteredCharacter && filteredCharacter.map(data => {
           return (
             <div className="character-list" key={data.id}>
-              <h2>
-                {data.name}
-              </h2>
-              <h3 className="capital">Status: {data.status}</h3>
+              <Container>
+                <Row>
+
+                  <Card>
+                    <CardTitle>
+                      {data.name}
+                    </CardTitle>
+                    <CardSubtitle>Status: {data.status}</CardSubtitle>
+
+                  </Card>
+
+                </Row>
+              </Container>
             </div>
           )
         })}
